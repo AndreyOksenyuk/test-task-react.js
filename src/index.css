@@ -1,0 +1,18 @@
+@font-face {
+   font-family: 'Open Sens Regular';
+   src: url('./assets/fonts/ofont.ru_OpenSans.ttf');
+}
+
+
+*{
+   box-sizing: border-box;
+}
+body{
+   position: relative;
+   background-color: #fff;
+   margin: 0;
+   font-family: 'Open Sans Regular',
+   sans-serif;
+}
+
+
