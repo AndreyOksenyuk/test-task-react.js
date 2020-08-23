@@ -13,27 +13,30 @@ function App() {
   return (
     <div className="App">
       {/* header */}
-      <div className="container">
-        <header className='header'>
-          <div className="header__logo">
-            <img src={logo1x} srcSet={logo2x} alt='logo' />
-            <h1>testtask</h1>
-          </div>
-          <nav className='nav'>
-            <ul className='nav__link'>
-              <a href="/"><li>About me</li></a>
-              <a href="/"><li>Relationships</li></a>
-              <a href="/"><li>Requirements</li></a>
-              <a href="/"><li>Users</li></a>
-              <a href="/"><li>Sign Up</li></a>
-            </ul>
-          </nav>
+      <div className="headerWrapper">
+        <div className="container">
+          <header className='header'>
+            <div className="header__logo">
+              <img src={logo1x} srcSet={logo2x} alt='logo' />
+              <h1>testtask</h1>
+            </div>
+            <nav className='nav'>
+              <ul className='nav__link'>
+                <a href="/"><li>About me</li></a>
+                <a href="/"><li>Relationships</li></a>
+                <a href="/"><li>Requirements</li></a>
+                <a href="/"><li>Users</li></a>
+                <a href="/"><li>Sign Up</li></a>
+              </ul>
+            </nav>
 
-          {/* mobile menu */}
-          <img src={burgerSvg} alt="" className="burger_btn" />
+            {/* mobile menu */}
+            <img src={burgerSvg} alt="" className="burger_btn" />
+          </header>
 
-        </header>
+        </div>
       </div>
+
       {/* banner */}
       <div className="banner">
         <div className="container">
@@ -45,13 +48,14 @@ function App() {
             Please be patient, we consider and respond to every application that meets
             minimum requirements. We look forward to your submission. Good luck!
               The photo has to scale in the banner area on the different screens</p>
+            <p className="banner__inner_text_mobile">We kindly remind you that your test
+            assignment should be submitted as a link to github/bitbucket repository.</p>
           </div>
-          <button className="btn">Sing up now</button>
+          <button className="btn btn_baner">Sing up now</button>
         </div>
       </div>
 
       {/*About me */}
-
       <div className="container">
         <div className="aboutMe">
           <h3 className="aboutMe__title">Let's get acquainted</h3>
