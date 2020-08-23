@@ -17,7 +17,6 @@
 
    &__logo {
       display: flex;
-      justify-content: center;
       align-items: center;
 
       img {
@@ -38,6 +37,36 @@
    }
 }
 
+//mobile menu. Drawer Ant Design
+.mobileMenu__nav {
+
+   &_link {
+      padding: 0 0 0 15px;
+      list-style: none;
+      border-bottom: 1px #e1e1e1 solid;
+      a {
+         text-decoration: none;
+         font-family: $font;
+         font-size: 16px;
+         color: #000000;
+
+         li {
+            margin-bottom: 18px;
+         }
+      }
+   }
+}
+
+.mobileMenu__nav_link :nth-child(5) {
+   li {
+      margin-bottom: 23px;
+   }
+}
+
+.mobileMenu__nav ul:nth-of-type(2){
+   margin-top: 24px;
+   margin-bottom: 24px;
+}
 
 
 //header navigation
