@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UploadPhot = () => {
+const UploadPhoto = () => {
    return (
       <>
       <label htmlFor="inputFile" style={{cursor: 'pointer'}}>
@@ -11,4 +11,4 @@ const UploadPhot = () => {
    );
 }
 
-export default UploadPhot;
+export default UploadPhoto;

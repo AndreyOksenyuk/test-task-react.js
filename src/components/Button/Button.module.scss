@@ -1,0 +1,29 @@
+@import '../../App.scss';
+
+.btn {
+   padding: 7px 60px;
+   font-weight: bold;
+   color: #ffffff;
+   background-color: $PrimaryColor;
+   border: none;
+   border-radius: 5px;
+   font-size: 16px;
+   font-family: $font;
+   font-weight: normal;
+   outline: none;
+   transition: background-color 0.2s linear;
+   cursor: pointer;
+
+   &:hover {
+      background-color: #d24335;
+   }
+
+   &:active {
+      background-color: #c03e32;
+   }
+
+   &:disabled {
+      background-color: #d7d7d7;
+      color: #8d8c8c;
+   }
+}

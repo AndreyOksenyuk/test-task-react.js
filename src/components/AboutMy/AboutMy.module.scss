@@ -1,0 +1,135 @@
+@import '../../App.scss';
+//About me
+.aboutMe {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 153px 0;
+   width: 100%;
+   overflow: auto;
+
+   &__title {
+      @include titleBlackText();
+      font-size: 49px;
+      margin-bottom: 66px;
+   }
+
+   &__content {
+      display: flex;
+      padding-top: 5px;
+      height: 292px;
+
+
+      &_img {
+         width: 392px;
+         height: 100%;
+      }
+
+      &_text {
+         height: 100%;
+         margin-left: 23px;
+         word-spacing: 1px;
+         margin-top: -6px;
+
+         h5 {
+            margin: 0;
+            font-size: 24px;
+            line-height: 30px;
+            color: $textBlack;
+         }
+
+         p {
+            color: #4c4b4b;
+            font-family: $font;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            margin: 0;
+         }
+
+         a {
+            text-decoration: none;
+            color: $PrimaryColor;
+            font-size: 16px;
+            line-height: 60px;
+            font-weight: bold;
+         }
+      }
+   }
+
+   p:nth-of-type(1) {
+      margin-top: 20px;
+      margin-bottom: 21px;
+   }
+
+   p:nth-of-type(2) {
+      margin-bottom: 12px;
+   }
+}
+
+//about me media
+@media screen and (max-width: 768px) {
+   .aboutMe {
+      display: flex;
+      align-items: center;
+      min-height: 655px;
+      margin: 0;
+
+      &__title {
+         font-size: 40px;
+         margin: 109px 0 58px 0;
+      }
+
+      &__content {
+         padding-top: 5px;
+         height: 292px;
+
+         &_img {
+            width: 255px;
+            padding: 0 9px 67px 0;
+         }
+
+         &_text {
+            margin-left: 22px;
+         }
+      }
+   }
+
+   .aboutMe p:nth-of-type(1) {
+      margin-bottom: 26px;
+   }
+}
+
+@media screen and (max-width: 360px) {
+   .aboutMe {
+      display: flex;
+      align-items: center;
+
+      &__title {
+         font-size: 30px;
+         margin: 66px 0 18px 0;
+      }
+
+      &__content {
+         flex-wrap: wrap;
+         height: auto;
+
+         &_img {
+            width: 295px;
+            margin-left: 23px;
+            padding: 0px 8px 35px 0px;
+         }
+
+         &_text {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+         }
+      }
+   }
+
+   .aboutMe p:nth-of-type(2) {
+      margin-bottom: 9px;
+   }
+}
