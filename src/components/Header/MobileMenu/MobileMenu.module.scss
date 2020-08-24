@@ -1,0 +1,53 @@
+@import '../../../App.scss';
+//mobile menu. Drawer Ant Design
+.mobileMenu__nav {
+
+   &_link {
+      padding: 0 0 0 15px;
+      list-style: none;
+      border-bottom: 1px #e1e1e1 solid;
+
+      a {
+         text-decoration: none;
+         font-family: $font;
+         font-size: 16px;
+         color: #000000;
+
+         li {
+            margin-bottom: 18px;
+         }
+      }
+   }
+}
+
+.mobileMenu__nav_link :nth-child(5) {
+   li {
+      margin-bottom: 23px;
+   }
+}
+
+.mobileMenu__nav ul:nth-of-type(2) {
+   margin-top: 24px;
+   margin-bottom: 24px;
+}
+
+.burger_btn {
+   display: none;
+}
+
+.activeLink {
+   li {
+      color: #1b4a8a !important;
+   }
+}
+
+//burger_btn
+@media screen and (max-width: 768px) {
+   .burger_btn {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+   }
+}

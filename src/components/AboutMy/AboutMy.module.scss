@@ -53,6 +53,10 @@
             font-size: 16px;
             line-height: 60px;
             font-weight: bold;
+            transition: color 0.1s linear;
+            &:hover{
+               color: #d24335;
+            }
          }
       }
    }

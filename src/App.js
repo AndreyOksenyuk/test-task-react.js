@@ -3,9 +3,9 @@ import './App.scss';
 import Header from './components/Header';
 import Banner from './components/Banner';
 import AboutMy from './components/AboutMy';
-import Users from './components/Users';
-import FormModule from './components/Form';
+import RegisterToGetWork from './components/RegisterToGetWork';
 import Footer from './components/Footer';
+import UsersContainer from './components/Users/UsersContainer';
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
 
       <AboutMy />
 
-      <Users />
+      <UsersContainer />
 
-      <FormModule />
+      <RegisterToGetWork />
 
       <Footer />
 
