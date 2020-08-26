@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Banner.module.scss'
 import ButtonMein from '../Button';
 
-const Banner = () => {
+const Banner = () => {   
    return (
       <div className={style.banner}>
          <div className="container">
@@ -18,7 +18,11 @@ const Banner = () => {
             assignment should be submitted as a link to github/bitbucket repository.</p>
             </div>
             <div className={style.btn_baner}>
-               <ButtonMein text={'Sing up now'} />
+               <ButtonMein
+                  text={'Sing up now'}
+                  tag='a'
+                  link="#register"
+               />
             </div>
          </div>
       </div>

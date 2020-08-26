@@ -4,19 +4,10 @@
 .users {
    display: flex;
    justify-content: center;
-   align-items: center;
    width: 100%;
    min-height: 1105px;
    background-color: $BackgroundColor2;
-
-   &__title {
-      @include titleBlackText();
-   }
-
-   &__subTitle {
-      @include subtitleText();
-      margin: 0 0 70px 0;
-   }
+   padding-bottom: 160px;
 }
 
 .users_wrapper {
@@ -25,63 +16,40 @@
    align-items: center;
 }
 
-.users__container {
-   display: grid;
-   grid-template-columns: repeat(auto-fill, 200px);
-   grid-column-gap: 133px;
-   grid-row-gap: 12px;
-   width: 100%;
-   justify-content: center;
-   margin-bottom: 5px;
-
-   .user {
-      min-height: 288px;
-      background-color: #ccc;
-   }
+.errorMessage {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 40px;
+   color: #bfbfbf;
 }
+
 
 @media screen and (max-width: 768px) {
    .users {
-
-      &__title {
-         font-size: 40px;
-         margin-bottom: 15px;
-      }
-
-      &__subTitle {
-         margin: 0 0 85px 0;
-      }
-
-   }
-
-   .users__container {
-      grid-column-gap: 45px;
-
-      .user {
-         min-height: 288px;
-      }
+      padding-bottom: 126px;
    }
 
    .btn_users {
       margin-bottom: 88px;
    }
+
+   .errorMessage {
+      font-size: 30px;
+   }
 }
 
 @media screen and (max-width: 360px) {
    .users {
-
-      &__title {
-         font-size: 30px;
-         margin-top: 121px;
-         margin-bottom: 0
-      }
-
-      &__subTitle {
-         margin: 0 0 0 0;
-      }
-
+      padding-bottom: 8px;
    }
+
    .btn_users {
       margin-bottom: 60px;
+   }
+
+   .errorMessage {
+      font-size: 15px;
    }
 }

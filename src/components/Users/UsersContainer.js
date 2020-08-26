@@ -1,23 +1,49 @@
-import React, { useEffect } from 'react';
+import React, { PureComponent } from 'react';
 import Users from '.';
 import { connect } from 'react-redux';
-import { setPositionsTC } from '../../redux/app-reducer'
+import { setPositionsTC, setTokenTC, } from '../../redux/app-reducer'
+import { getUsersTC, setNamberCountUsersAC, getNewBatchOfUsers } from '../../redux/users-reducer'
 
-const UsersContainer = (props) => {
+class UsersContainer extends PureComponent {
 
-   useEffect(() => {
-      props.setPositionsTC('positions')
-   })
+   componentDidMount() {
 
-   return <Users {...props} />
+      let queryNamber = async () => {
+         let fun = () => {
+            if (window.screen.width < 500) {
+               this.props.setNamberCountUsersAC(3)
+            } else {
+               this.props.setNamberCountUsersAC(6)
+            }
+         }
+         await fun()
+         await this.props.getUsersTC(this.props.page, this.props.namber);
+      }
+      queryNamber()
+      this.props.setPositionsTC('positions')
+      this.props.setTokenTC('token')
+   }
+
+   render() {
+      return <Users {...this.props} />
+   }
+
 }
 
-const mapStateToProps = (state) =>({
-
+const mapStateToProps = (state) => ({
+   page: state.user.page,
+   namber: state.user.namber,
+   users: state.user.users,
+   naxtLink: state.user.nextLink,
+   disableBtn: state.user.disableBtn,
+   showPreloader: state.user.showPreloader,
+   statusError: state.user.statusError,
+   
 })
 
 const UsersConnect = connect(mapStateToProps, {
-   setPositionsTC,
+   setPositionsTC, setTokenTC, getUsersTC,
+   setNamberCountUsersAC, getNewBatchOfUsers
 })(UsersContainer)
 
 export default UsersConnect;

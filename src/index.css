@@ -13,7 +13,7 @@ body{
    margin: 0;
    font-family: 'Open Sans Regular',
    sans-serif;
-   
+   min-width: 360px;
 }
 
 

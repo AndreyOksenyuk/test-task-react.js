@@ -3,22 +3,28 @@ import { useSelector } from 'react-redux';
 import { Field, reduxForm } from 'redux-form'
 import style from '../RegisterToGetWork.module.scss'
 import ButtonMein from '../../Button';
-import InputComponent from './InputComponent';
-import InputUploadImg from './InputUploadImg/InputUploadImg';
+import InputValidation from '../../module/InputValidation';
+import InputUploadImg from './InputUploadingImg/InputUploadImg';
+import ModaComponent from './ModalComponent'
+import { phoneNumber, minLength2, maxLength60, email, required } from '../../utils/Validators';
+import RadioInputValidation from '../../module/RadioInputValidation';
 
 let RegisterForma = ({ handleSubmit }) => {
    const positions = useSelector(state => state.app.positions)
-
-
+   const disableBtn = useSelector(state => state.user.disableBtn)
+   const messageError = useSelector(state => state.user.messageError)
 
    return (
       <form className={style.Form} onSubmit={handleSubmit}>
+         {messageError !== '' && <strong style={{color: 'red'}}>{messageError}</strong>}
          <label htmlFor="inputName">Name</label>
          <Field 
             name="name"
             placeholder="Your name" 
             id="inputName" 
-            component={InputComponent}
+            component={InputValidation}
+            validate={[minLength2, maxLength60]}
+            
          />
 
          <label htmlFor="inputEmail">Email</label>
@@ -26,7 +32,8 @@ let RegisterForma = ({ handleSubmit }) => {
             name="email"
             placeholder="Your email" 
             id="inputEmail" 
-            component={InputComponent}
+            component={InputValidation}
+            validate={[email]}
          />
 
          <label htmlFor="inputPhone">Phone namber</label>
@@ -34,7 +41,9 @@ let RegisterForma = ({ handleSubmit }) => {
             name="phone"
             placeholder="+380 XX XXX XX XX" 
             id="inputPhone" 
-            component={InputComponent}
+            component={InputValidation}
+            validate={[phoneNumber]}
+            AssistiveText='Еnter phone number in open format'
          />
 
 
@@ -45,11 +54,12 @@ let RegisterForma = ({ handleSubmit }) => {
                return (
                   <div className={style.checkBox} key={e.id}>
                      <Field 
-                        name="position" 
+                        name="position_id" 
                         id={e.name} 
-                        component={InputComponent}  
+                        component={RadioInputValidation}  
                         type="radio"
-                        value={i + 1 + ''}     
+                        value={i + 1 + ''}  
+                        validate={[required]}   
                      />
                      <label htmlFor={e.name}>{e.name}</label>
                   </div>
@@ -61,7 +71,8 @@ let RegisterForma = ({ handleSubmit }) => {
          <InputUploadImg />
 
          <div className={style.btn_formSubmit}>
-            <ButtonMein text={'Singup now'} />
+            <ModaComponent />
+            <ButtonMein text={'Singup now'} tag='button' disable={disableBtn}/>
          </div>
       </form>
    );

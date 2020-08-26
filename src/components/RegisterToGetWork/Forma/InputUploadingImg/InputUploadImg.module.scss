@@ -66,4 +66,13 @@
       display: block;
       cursor: pointer;
    }
+
+}
+
+.imageHide{
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   opacity: 0;
+   z-index: -1;
 }

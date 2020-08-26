@@ -1,12 +1,19 @@
 import React from 'react';
 import style from './AboutMy.module.scss';
 import manLaptop from '../../assets/img/man-laptop-v1.svg'
+import TitleAndSubtitle from '../TitleAndSubtitle';
 
 const AboutMy = () => {
    return (
       <div className="container">
          <div className={style.aboutMe}>
-            <h3 className={style.aboutMe__title}>Let's get acquainted</h3>
+
+            <TitleAndSubtitle
+               id="aboutMy_title"
+               title="Let's get acquainted"
+            />
+
+
             <div className={style.aboutMe__content}>
                <img src={manLaptop} alt='man-laptop' className={style.aboutMe__content_img} />
                <div className={style.aboutMe__content_text}>
@@ -18,7 +25,7 @@ const AboutMy = () => {
                   bower/npm/yarn you will get bonus points. If you use any task runner
                   (gulp/webpack) you will get bonus points as well. Slice service
               directory page PSD mockup into HTML5/CSS3.</p>
-                  <a href="/">Sing up now</a>
+                  <a href="#register">Sing up now</a>
                </div>
             </div>
          </div>
