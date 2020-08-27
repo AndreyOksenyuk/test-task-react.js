@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/test-task-react.js/static/css/main.c983f721.chunk.css",
-    "main.js": "/test-task-react.js/static/js/main.731fc762.chunk.js",
-    "main.js.map": "/test-task-react.js/static/js/main.731fc762.chunk.js.map",
+    "main.js": "/test-task-react.js/static/js/main.66e0a675.chunk.js",
+    "main.js.map": "/test-task-react.js/static/js/main.66e0a675.chunk.js.map",
     "runtime-main.js": "/test-task-react.js/static/js/runtime-main.ebc2b600.js",
     "runtime-main.js.map": "/test-task-react.js/static/js/runtime-main.ebc2b600.js.map",
     "static/css/2.04ff9426.chunk.css": "/test-task-react.js/static/css/2.04ff9426.chunk.css",
-    "static/js/2.da7251a2.chunk.js": "/test-task-react.js/static/js/2.da7251a2.chunk.js",
-    "static/js/2.da7251a2.chunk.js.map": "/test-task-react.js/static/js/2.da7251a2.chunk.js.map",
+    "static/js/2.b54a3888.chunk.js": "/test-task-react.js/static/js/2.b54a3888.chunk.js",
+    "static/js/2.b54a3888.chunk.js.map": "/test-task-react.js/static/js/2.b54a3888.chunk.js.map",
     "index.html": "/test-task-react.js/index.html",
-    "precache-manifest.b73b16eae0ae445f03c8db6bf70739ee.js": "/test-task-react.js/precache-manifest.b73b16eae0ae445f03c8db6bf70739ee.js",
+    "precache-manifest.6d8240c59e360fa434ade5c2644d39d0.js": "/test-task-react.js/precache-manifest.6d8240c59e360fa434ade5c2644d39d0.js",
     "service-worker.js": "/test-task-react.js/service-worker.js",
     "static/css/2.04ff9426.chunk.css.map": "/test-task-react.js/static/css/2.04ff9426.chunk.css.map",
     "static/css/main.c983f721.chunk.css.map": "/test-task-react.js/static/css/main.c983f721.chunk.css.map",
-    "static/js/2.da7251a2.chunk.js.LICENSE.txt": "/test-task-react.js/static/js/2.da7251a2.chunk.js.LICENSE.txt",
+    "static/js/2.b54a3888.chunk.js.LICENSE.txt": "/test-task-react.js/static/js/2.b54a3888.chunk.js.LICENSE.txt",
     "static/media/Banner.module.scss": "/test-task-react.js/static/media/banner-photo-mobile.6db7c640.webp",
     "static/media/man-laptop-v1.svg": "/test-task-react.js/static/media/man-laptop-v1.3cdf7897.svg",
     "static/media/menu-icon.svg": "/test-task-react.js/static/media/menu-icon.6f6bef28.svg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.ebc2b600.js",
     "static/css/2.04ff9426.chunk.css",
-    "static/js/2.da7251a2.chunk.js",
+    "static/js/2.b54a3888.chunk.js",
     "static/css/main.c983f721.chunk.css",
-    "static/js/main.731fc762.chunk.js"
+    "static/js/main.66e0a675.chunk.js"
   ]
 }
