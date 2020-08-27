@@ -6,7 +6,7 @@ import ButtonMein from '../../Button';
 import InputValidation from '../../module/InputValidation';
 import InputUploadImg from './InputUploadingImg/InputUploadImg';
 import ModaComponent from './ModalComponent'
-import { phoneNumber, minLength2, maxLength60, email, required } from '../../utils/Validators';
+import { phoneNumber, minLength2, maxLength60, maxLength100, email, required } from '../../utils/Validators';
 import RadioInputValidation from '../../module/RadioInputValidation';
 
 let RegisterForma = ({ handleSubmit }) => {
@@ -16,14 +16,14 @@ let RegisterForma = ({ handleSubmit }) => {
 
    return (
       <form className={style.Form} onSubmit={handleSubmit}>
-         {messageError !== '' && <strong style={{color: 'red'}}>{messageError}</strong>}
+         {messageError !== '' && <p className={style.textErrorForm}>{messageError}</p>}
          <label htmlFor="inputName">Name</label>
          <Field 
             name="name"
             placeholder="Your name" 
             id="inputName" 
             component={InputValidation}
-            validate={[minLength2, maxLength60]}
+            validate={[required, minLength2, maxLength60]}
             
          />
 
@@ -33,7 +33,7 @@ let RegisterForma = ({ handleSubmit }) => {
             placeholder="Your email" 
             id="inputEmail" 
             component={InputValidation}
-            validate={[email]}
+            validate={[required, email, minLength2, maxLength100]}
          />
 
          <label htmlFor="inputPhone">Phone namber</label>
@@ -42,7 +42,7 @@ let RegisterForma = ({ handleSubmit }) => {
             placeholder="+380 XX XXX XX XX" 
             id="inputPhone" 
             component={InputValidation}
-            validate={[phoneNumber]}
+            validate={[required, phoneNumber]}
             AssistiveText='Еnter phone number in open format'
          />
 

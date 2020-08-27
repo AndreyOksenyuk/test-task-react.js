@@ -12,6 +12,7 @@ const Users = (props) => {
          props.getNewBatchOfUsers(props.naxtLink)
       }
    }
+
    return (
       <div className={style.users}>
          <div className="container">
@@ -26,7 +27,7 @@ const Users = (props) => {
                   <LoadingOutlined style={{ fontSize: '40px' }} />
                </div>
                : <div className={style.users_wrapper}>
-               
+
                   <UserCard users={props.users} />
                   {props.naxtLink !== null &&
                      <div className={style.btn_users} onClick={onShowMore}>

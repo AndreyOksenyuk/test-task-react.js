@@ -36,6 +36,12 @@ $textBlack: #212529;
    padding: 0;
 }
 
+//modal window header styles
+.ant-modal-header {
+   padding: 18px 16px !important;
+}
+
+
 @media screen and (min-width: 1170px) {
    .container {
       width: 1170px;
@@ -50,14 +56,16 @@ $textBlack: #212529;
 
    #users_title {
       margin: 102px 0px 72px;
-      h4{
+
+      h4 {
          margin-top: 11px;
       }
    }
 
    #form_title {
       margin: 0 0px 18px;
-      h4{
+
+      h4 {
          padding-top: 8px;
       }
    }
@@ -79,17 +87,20 @@ $textBlack: #212529;
 
    #users_title {
       margin: 122px 0px 0;
-      h3{
+
+      h3 {
          padding: 0;
       }
-      h4{
+
+      h4 {
          margin: 0;
       }
    }
 
    #form_title {
       margin: 16px 0px 23px;
-      h4{
+
+      h4 {
          max-width: 310px;
          margin: 0;
          padding: 4px;

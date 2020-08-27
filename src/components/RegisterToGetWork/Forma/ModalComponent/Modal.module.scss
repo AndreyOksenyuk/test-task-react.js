@@ -1,28 +1,45 @@
-.body{
+@import '../../../../App.scss';
+
+.body {
    display: flex;
    align-items: center;
    height: 58px;
-   p{
+   margin-bottom: 16px;
+
+   p {
       border-bottom: 1px solid #eceef1;
+      border-top: 1px solid #eceef1;
       margin: 0;
+      padding: 15px 0;
+      color: #4c4b4b;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: $font;
    }
 }
 
-.svgClose{
+.svgClose {
    position: relative;
    width: 100%;
    height: 100%;
-   svg{
+
+   svg {
       position: absolute;
       top: 50%;
-      left: 50%;   
+      left: 50%;
       width: 12px;
       height: 12px;
       transform: translate(-50%, -50%);
       fill: #7b7b7b;
       transition: fill 0.2s linear;
-      &:hover{
+
+      &:hover {
          fill: #3b3b3b;
       }
    }
+}
+
+.buttonGread_wrapper {
+   display: flex;
+   justify-content: flex-end;
 }

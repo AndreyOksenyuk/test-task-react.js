@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RadioInputValidation = React.memo(({ input, meta, ...props }) => {
+const RadioInputValidation = React.memo(({ input, meta, AssistiveText, ...props }) => {
 
    return (
       <>

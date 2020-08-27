@@ -48,6 +48,14 @@
    }
 }
 
+.textErrorForm{
+   display: flex;
+   justify-content: center;
+   font-size: 16px;
+   font-family: $font;
+   color: #f44336;
+}
+
 //Radio input
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
 

@@ -13,7 +13,7 @@ const SET_MESSAGE_ERROR = 'app-reducer/SET_MESSAGE_ERROR'
 let initialState = {
    users: [],
    page: 1,
-   namber: null,
+   countUsers: null,
    nextLink: null,
    disableBtn: false,
    showModal: false,
@@ -33,8 +33,8 @@ const Users_reducer = (state = initialState, action) => {
       case SHOW_MORE_USERS:
          return {
             ...state,
-            users: [...state.users, ...action.users],
-            nextLink: action.nextLink,
+            users: action.users ? [...state.users, ...action.users] : state.users,
+            nextLink: action.nextLink ? action.nextLink : null,
          }
       case SET_PAGE_USERS:
          return {
@@ -44,7 +44,7 @@ const Users_reducer = (state = initialState, action) => {
       case SET_NAMBER_COUNT_USERS:
          return {
             ...state,
-            namber: action.namber
+            countUsers: action.namber
          }
       case SET_DISABLE_BTN:
          return {
@@ -137,18 +137,25 @@ export const getUsersTC = (page, count) => async (dispatch) => {
 export const getNewBatchOfUsers = (url) => async (dispatch) => {
    await dispatch(setDisableBtnAC(true))
    await getUsers(null, null, url).then(data => {
-      dispatch(ShowMoreUsersAC(data.users, data.links.next_url))
+      if (data.success) {
+         dispatch(ShowMoreUsersAC(data.users, data.links.next_url))
+      }
+      else if (!data.success && data.message === 'Page not found') {
+         dispatch(ShowMoreUsersAC(null, null))
+      }
    })
+
    dispatch(setDisableBtnAC(false))
 }
 
-export const postMyDataTC = (data, token) => async (dispatch) => {
+export const postMyDataTC = (data, token, page, usersCount) => async (dispatch) => {
    await dispatch(setDisableBtnAC(true))
    await postMyData(data, token).then(response => {
 
       if (response.ok) {
          dispatch(setShowModalAC(true))
          dispatch(setMessageErrorAC(''))
+         dispatch(getUsersTC(page, usersCount))
       }
       else if (!response.ok && response.status === 409) {
          dispatch(setMessageErrorAC('User with this phone or email already exist'))

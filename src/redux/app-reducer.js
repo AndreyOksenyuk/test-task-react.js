@@ -3,10 +3,12 @@ import { getQuery } from "../api"
 const SET_POSITIONS_VALUE = 'app-reducer/SET_POSITIONS_VALUE'
 const SET_TOKEN = 'app-reducer/SET_TOKEN'
 const SET_IMG_FILE = 'app-reducer/SET_IMG_FILE'
+const SET_IS_VALID_PHOTO_INPUT = 'app-reducer/SET_IS_VALID_PHOTO_INPUT'
 
 let initialState = {
    positions: null,
    imgFile: null,
+   isValidPhotoInput: false,
    token: null,
 }
 
@@ -27,6 +29,11 @@ const App_reducer = (state = initialState, action) => {
             ...state,
             imgFile: action.img,
          }
+      case SET_IS_VALID_PHOTO_INPUT:
+         return {
+            ...state,
+            isValidPhotoInput: action.boolean,
+         }
       default:
          return state
    }
@@ -45,6 +52,11 @@ const setTokenAC = (token) => ({
 export const setImgFailAC = (img) => ({
    type: SET_IMG_FILE,
    img
+})
+
+export const setIsValidPhotoInputAC = (boolean) => ({
+   type: SET_IS_VALID_PHOTO_INPUT,
+   boolean
 })
 
 

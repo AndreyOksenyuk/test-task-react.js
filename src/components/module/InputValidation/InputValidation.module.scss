@@ -2,8 +2,10 @@
 
 .input_wrapper {
    position: relative;
+
    .inputNovalid {
       border: 1px solid #dc3545;
+      box-shadow: 0px 0px 4px #dc3545;
 
       &:focus {
          border: 1px solid #dc3545;
@@ -26,7 +28,8 @@
       font-family: $font;
       margin: 0;
    }
-   .AssistiveText{
+
+   .AssistiveText {
       @extend .errorMessage;
       color: #212529;
    }
