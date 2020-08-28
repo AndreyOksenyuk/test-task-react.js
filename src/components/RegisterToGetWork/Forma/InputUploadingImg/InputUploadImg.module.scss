@@ -24,7 +24,7 @@
       display: block;
       pointer-events: none;
       height: 100%;
-      max-width: 200px;
+      max-width: 350px;
       font-size: 16px;
       font-family: $font;
       color: #999;
@@ -79,4 +79,13 @@
    overflow: hidden;
    opacity: 0;
    z-index: -1;
+}
+
+
+@media screen and (max-width: 360px) {
+   .file_upload_wrapper{
+      &:after{
+         max-width: 200px;
+      }
+   }
 }

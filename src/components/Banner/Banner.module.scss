@@ -6,10 +6,10 @@
    justify-content: center;
    width: 100%;
    min-height: 600px;
-   background-image: url('../../assets/img/banner-photo.webp');
+   background-image: url('../../assets/img/banner-photo-desktop.webp');
    background-size: cover;
    background-repeat: no-repeat;
-   background-color: #ccc;
+   background-color: #111f41;
 
    &__inner {
       display: flex;
@@ -67,7 +67,7 @@
    .banner {
       position: relative;
       min-height: 400px;
-      background-image: url('../../assets/img/banner-photo-mobile.jpg');
+      background-image: url('../../assets/img/banner-photo-mobile.webp');
       background-position: center;
       padding-left: 2px;
 

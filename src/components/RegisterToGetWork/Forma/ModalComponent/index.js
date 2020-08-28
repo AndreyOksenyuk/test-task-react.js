@@ -13,7 +13,7 @@ const styleTitle = {
    margin: '0'
 }
 
-const ModaComponent = () => {
+const ModaComponent =React.memo(() => {
    const dispatch = useDispatch()
    let visible = useSelector(state => state.user.showModal)
 
@@ -52,7 +52,7 @@ const ModaComponent = () => {
          </Modal>
       </>
    );
-}
+})
 
 
 export default ModaComponent;

@@ -2,13 +2,13 @@ import React from 'react';
 import style from './Banner.module.scss'
 import ButtonMein from '../Button';
 
-const Banner = () => {   
+const Banner = () => {
    return (
       <div className={style.banner}>
          <div className="container">
             <div className={style.banner__inner}>
-               <h3 className={style.banner__inner_title}>Test assignment for Frontend
-              Developer position</h3>
+               <h2 className={style.banner__inner_title}>Test assignment for Frontend
+              Developer position</h2>
                <p className={style.banner__inner_text}>We kindly remind you that your test
                assignment should be submitted as a link to github/bitbucket repository.
                Please be patient, we consider and respond to every application that meets

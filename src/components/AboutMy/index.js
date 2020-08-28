@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './AboutMy.module.scss';
-import manLaptop from '../../assets/img/man-laptop-v1.svg'
 import TitleAndSubtitle from '../TitleAndSubtitle';
 
 const AboutMy = () => {
@@ -13,11 +12,10 @@ const AboutMy = () => {
                title="Let's get acquainted"
             />
 
-
             <div className={style.aboutMe__content}>
-               <img src={manLaptop} alt='man-laptop' className={style.aboutMe__content_img} />
+               <img src={require('../../assets/img/man-laptop-v1.svg')} alt='man-laptop' className={style.aboutMe__content_img} />
                <div className={style.aboutMe__content_text}>
-                  <h5>I am cool frontend developer</h5>
+                  <h4>I am cool frontend developer</h4>
                   <p>We will evaluate how clean your approach to writing CSS and Javascript code is.
               You can use any CSS and Javascript 3rd party libraries without any restriction.</p>
 

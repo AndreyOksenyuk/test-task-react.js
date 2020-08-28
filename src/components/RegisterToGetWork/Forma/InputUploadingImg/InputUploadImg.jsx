@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setImgFailAC } from '../../../../redux/app-reducer';
 
 
-let InputUploadImg = () => {
+let InputUploadImg = React.memo(() => {
    const isValidPhotoInput = useSelector(state => state.app.isValidPhotoInput)
    const dispatch = useDispatch()
    const inputRef = useRef()
@@ -82,6 +82,6 @@ let InputUploadImg = () => {
          />
       </div>
    );
-}
+})
 
 export default InputUploadImg;

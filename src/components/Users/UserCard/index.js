@@ -4,7 +4,7 @@ import 'antd/dist/antd.css';
 import { Tooltip } from 'antd';
 import userWithoutAvatar from '../../../assets/img/photo-cover.svg'
 
-const UserCard = ({ users }) => {
+const UserCard =React.memo(({ users }) => {
 
    return (
       <div className={style.users__container}>
@@ -14,7 +14,7 @@ const UserCard = ({ users }) => {
                return (
                   <div className={style.user} key={"" + user.id + i}>
                      <img
-                        src={/.png$/.test(user.photo)
+                        src={/.png$/.test(user.photo) || !user.photo
                            ? userWithoutAvatar
                            : user.photo
                         }
@@ -37,6 +37,6 @@ const UserCard = ({ users }) => {
 
       </div>
    );
-}
+})
 
 export default UserCard;

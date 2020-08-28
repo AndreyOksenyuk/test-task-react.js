@@ -10,14 +10,18 @@ const ButtonMein = ({ text, tag, id, link = '/', disable = false }) => {
                   className={style.btn}
                   disabled={disable}
                   id={id}
-               >{text}</button>
+               >
+                  {text}
+               </button>
 
                : <a
                   href={link}
                   className={style.btn}
                   disabled={disable}
                   id={id}
-               >{text}</a>
+               >
+                  {text}
+               </a>
          }
       </>
    );

@@ -49,14 +49,13 @@
          margin-left: 14px;
          margin-right: 15px;
 
-         li {
-            font-family: $font;
-            font-size: 14px;
-            color: $textBlack;
-            transition: color 0.1s linear;
-            &:hover{
-               color: $PrimaryColor;
-            }
+         font-family: $font;
+         font-size: 14px;
+         color: $textBlack;
+         transition: color 0.1s linear;
+
+         &:hover {
+            color: $PrimaryColor;
          }
       }
 
@@ -69,10 +68,9 @@
       }
    }
 }
-.activeLink{
-   li{
-      color: #1b4a8a !important; 
-   }
+
+.activeLink {
+   color: #1b4a8a !important;
 }
 
 .burger_btn {

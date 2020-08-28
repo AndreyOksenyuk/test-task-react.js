@@ -32,5 +32,12 @@
    .AssistiveText {
       @extend .errorMessage;
       color: #212529;
+      line-height: 28px;
+   }
+}
+
+@media screen and (max-width: 360px) {
+   .AssistiveText {
+      color: #6c757d !important;
    }
 }

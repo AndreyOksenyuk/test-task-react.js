@@ -9,7 +9,7 @@ import ModaComponent from './ModalComponent'
 import { phoneNumber, minLength2, maxLength60, maxLength100, email, required } from '../../utils/Validators';
 import RadioInputValidation from '../../module/RadioInputValidation';
 
-let RegisterForma = ({ handleSubmit }) => {
+let RegisterForma = React.memo(({ handleSubmit }) => {
    const positions = useSelector(state => state.app.positions)
    const disableBtn = useSelector(state => state.user.disableBtn)
    const messageError = useSelector(state => state.user.messageError)
@@ -47,7 +47,7 @@ let RegisterForma = ({ handleSubmit }) => {
          />
 
 
-         <h6>Select your positio</h6>
+         <p>Select your positio</p>
 
          {positions !== null &&
             positions.map((e, i) => {
@@ -76,7 +76,7 @@ let RegisterForma = ({ handleSubmit }) => {
          </div>
       </form>
    );
-}
+})
 
 RegisterForma = reduxForm({
    form: 'register'
