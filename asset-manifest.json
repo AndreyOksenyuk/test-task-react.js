@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/test-task-react.js/static/css/main.3dea7bec.chunk.css",
-    "main.js": "/test-task-react.js/static/js/main.a099bc46.chunk.js",
-    "main.js.map": "/test-task-react.js/static/js/main.a099bc46.chunk.js.map",
+    "main.css": "/test-task-react.js/static/css/main.3f389616.chunk.css",
+    "main.js": "/test-task-react.js/static/js/main.50516762.chunk.js",
+    "main.js.map": "/test-task-react.js/static/js/main.50516762.chunk.js.map",
     "runtime-main.js": "/test-task-react.js/static/js/runtime-main.ebc2b600.js",
     "runtime-main.js.map": "/test-task-react.js/static/js/runtime-main.ebc2b600.js.map",
     "static/css/2.04ff9426.chunk.css": "/test-task-react.js/static/css/2.04ff9426.chunk.css",
-    "static/js/2.b54a3888.chunk.js": "/test-task-react.js/static/js/2.b54a3888.chunk.js",
-    "static/js/2.b54a3888.chunk.js.map": "/test-task-react.js/static/js/2.b54a3888.chunk.js.map",
+    "static/js/2.cd1306fd.chunk.js": "/test-task-react.js/static/js/2.cd1306fd.chunk.js",
+    "static/js/2.cd1306fd.chunk.js.map": "/test-task-react.js/static/js/2.cd1306fd.chunk.js.map",
     "index.html": "/test-task-react.js/index.html",
-    "precache-manifest.c189d5dd23ebb8099a4a6934a7eac412.js": "/test-task-react.js/precache-manifest.c189d5dd23ebb8099a4a6934a7eac412.js",
+    "precache-manifest.ab149fb25269c7984db57d9ff1ab870d.js": "/test-task-react.js/precache-manifest.ab149fb25269c7984db57d9ff1ab870d.js",
     "service-worker.js": "/test-task-react.js/service-worker.js",
     "static/css/2.04ff9426.chunk.css.map": "/test-task-react.js/static/css/2.04ff9426.chunk.css.map",
-    "static/css/main.3dea7bec.chunk.css.map": "/test-task-react.js/static/css/main.3dea7bec.chunk.css.map",
-    "static/js/2.b54a3888.chunk.js.LICENSE.txt": "/test-task-react.js/static/js/2.b54a3888.chunk.js.LICENSE.txt",
+    "static/css/main.3f389616.chunk.css.map": "/test-task-react.js/static/css/main.3f389616.chunk.css.map",
+    "static/js/2.cd1306fd.chunk.js.LICENSE.txt": "/test-task-react.js/static/js/2.cd1306fd.chunk.js.LICENSE.txt",
     "static/media/Banner.module.scss": "/test-task-react.js/static/media/banner-photo-mobile.6db7c640.webp",
     "static/media/man-laptop-v1.svg": "/test-task-react.js/static/media/man-laptop-v1.3cdf7897.svg",
     "static/media/menu-icon.svg": "/test-task-react.js/static/media/menu-icon.6f6bef28.svg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.ebc2b600.js",
     "static/css/2.04ff9426.chunk.css",
-    "static/js/2.b54a3888.chunk.js",
-    "static/css/main.3dea7bec.chunk.css",
-    "static/js/main.a099bc46.chunk.js"
+    "static/js/2.cd1306fd.chunk.js",
+    "static/css/main.3f389616.chunk.css",
+    "static/js/main.50516762.chunk.js"
   ]
 }
